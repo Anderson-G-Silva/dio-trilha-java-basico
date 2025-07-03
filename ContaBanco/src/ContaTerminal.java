@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
         //To do: conhecer e importar a classe scanner
-        var scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         //Exibir mensagens solicitando o código agência
         System.out.println("Por gentileza, digite o código da agência com dígito:");
         //Obter pelo scanner o código da agência
@@ -16,7 +16,8 @@ public class ContaTerminal {
         //Exibir mensagens solicitando o nome do cliente
         System.out.println("Por gentileza, digite o nome completo:");
         //Obter pelo scanner o nome do cliente
-        String customerName = scanner.next();
+        scanner.nextLine();
+        String customerName = scanner.nextLine();
         // saldo conta corrente - informação interna
         Double currentAccountBalance = 247.48;  
         //Exibir a mensagen conta criada
