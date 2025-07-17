@@ -1,18 +1,47 @@
-## Getting Started
+# Criação de aplicação para conta corrente
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Criação de aplicação para obter informações dos clientes para abertura de conta corrente com mensagem final parabenizando o cliente
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+## Campos
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+| Campo   | Tipo       | exemplo                           | Origem da Informação |
+| :---------- | :--------- | :---------------------------------- |-----------------|
+| `Agency` | `string` | 067-8 | `Clientes`|
+| `Current Account` | `inteiro` | 1021 | `Clientes`|
+| `Customer name` | `string` | Mário Andrade| `Clientes`|
+| `Current Account Balance` | `Inteiro` | 237.48 | `Banco`|
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Mensagem final
+"Olá [Customer name], obrigado por criar uma conta em nosso banco, sua agência é [Agency], conta [Current Account] e seu saldo [Current Account Balance] já está disponível para saque".
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Fluxograma
+```mermaid
+flowchart TD
+    A(["Start"]) --> B[\"Informar código da agência"\]
+    B --> C[\"Informar número da conta corrente"\]
+    C --> D[\"Informar nome completo"\]
+    D --> E["Internal Storage"]
+    E --> F["Consulta saldo conta corrente"]
+    F --> G["Mensagem cliente"]
+    G --> H["End"]
+    E@{ shape: internal-storage}
+    F@{ shape: in-out}
+    G@{ shape: doc}
+    H@{ shape: terminal}
+```
 
-## Dependency Management
+## Linguagens utilizadas
+- Java Versão 21.0.7
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Referências
+
+- [DIO - Trilha Java básico](https://github.com/digitalinnovationone/trilha-java-basico/blob/main/desafios/sintaxe/README.md)
+
+
+
+## Autores
+
+- [@Anderson-G-Silva](https://github.com/Anderson-G-Silva)
+
+
