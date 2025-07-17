@@ -19,9 +19,8 @@ Se [First Parameter] OU [Second Parameter] forem menores de 0 (zero) >> mensagem
 
 ## Fluxograma
 ```mermaid
-flowchart TD
     flowchart TD
-    A["Start"] --> B["First Parameter"]
+    A(["Start"]) --> B["First Parameter"]
     B --> C["Second Parameter"]
     C --> D["Parameter validation"]
     D -- Invalid Parameter ---> A
